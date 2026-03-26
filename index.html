@@ -90,51 +90,6 @@
             letter-spacing: -.3px;
         }
 
-        .crs-prog-track { height: 6px; background: rgba(79, 70, 229, .16); border-radius: 3px; margin-bottom: 8px; overflow: hidden; }
-        .crs-prog-fill { height: 100%; background: var(--blue); border-radius: 3px; width: 0%; transition: width .45s ease; }
-        .crs-prog-row { display: flex; justify-content: space-between; font-size: 12.5px; color: #6366F1; }
-        .crs-prog-count { font-weight: 600; color: var(--blue); }
-
-        .crs-continue {
-            display: none;
-            margin-top: 14px;
-            background: var(--blue);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 9px 18px;
-            font-size: 13px;
-            font-weight: 600;
-            font-family: 'DM Sans', sans-serif;
-            cursor: pointer;
-            align-items: center;
-            gap: 6px;
-            transition: background .15s;
-        }
-        .crs-continue.vis { display: inline-flex; }
-
-        .phases { padding: 0 16px; }
-        .phase-blk { margin-bottom: 28px; }
-        .phase-hd { display: flex; align-items: baseline; gap: 9px; margin-bottom: 10px; }
-        .phase-num { font-size: 22px; font-weight: 800; color: var(--blue); }
-        .phase-lbl { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
-        .phase-rule { border: none; border-top: 1.5px solid var(--border); margin-bottom: 12px; }
-        
-        .lessons-col { display: flex; flex-direction: column; gap: 7px; }
-        .lc {
-            background: var(--bg-2);
-            border: 1px solid var(--border);
-            border-radius: 13px;
-            padding: 12px 14px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: all .15s;
-            user-select: none;
-        }
-        .lc:hover { background: var(--blue-xl); border-color: rgba(79, 70, 229, .3); transform: translateX(2px); box-shadow: 0 2px 8px rgba(79, 70, 229, .08); }
-        
         .lc-ico {
             width: 40px;
             height: 40px;
@@ -145,7 +100,6 @@
             justify-content: center;
             flex-shrink: 0;
         }
-        .lc.done .lc-ico { background: var(--green-l); }
         .lc-body { flex: 1; min-width: 0; }
         .lc-title { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.35; margin-bottom: 3px; }
         .lc-meta { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--ink-3); }
@@ -183,12 +137,10 @@
             transition: all .2s ease;
             box-shadow: 0 4px 20px rgba(0,0,0,0.25);
             -webkit-appearance: none;
+            appearance: none;
         }
         .back-btn:hover { transform: scale(1.05); background: #1e293b !important; }
         .back-btn svg { stroke: #ffffff !important; }
-
-        .read-track { flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
-        .read-fill { height: 100%; background: var(--blue); width: 0%; border-radius: 2px; }
 
         .art-pg { max-width: 540px; margin: 0 auto; padding: 28px 20px 72px; }
         .art-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
@@ -196,39 +148,13 @@
         .art-meta { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--ink-3); padding-bottom: 22px; border-bottom: 1px solid var(--border); margin-bottom: 26px; }
 
         .art-body h2 { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; color: var(--ink); letter-spacing: -.3px; line-height: 1.3; margin: 32px 0 12px; }
-        .art-body p { font-size: 16px; line-height: 1.85; color: var(--ink-2); margin-bottom: 15px; }
-        .art-body ul { list-style: none; padding: 0; margin: 0 0 16px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-        .art-body ul li { font-size: 15.5px; line-height: 1.7; color: var(--ink-2); padding: 12px 16px 12px 42px; border-bottom: 1px solid var(--border); position: relative; }
-        .art-body ul li:last-child { border-bottom: none; }
-        .art-body ul li::before { content: ''; position: absolute; left: 14px; top: 19px; width: 10px; height: 10px; background: var(--blue); border-radius: 50%; opacity: .45; }
-
-        .quiz-card { text-align: center; padding: 28px 0; }
-        .quiz-ico { width: 60px; height: 60px; border-radius: 18px; background: var(--blue-l); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
-        .quiz-card h2 { font-family: 'DM Serif Display', serif; font-size: 23px; font-weight: 400; margin-bottom: 10px; }
-        .quiz-card p { font-size: 15px; color: var(--ink-3); line-height: 1.7; margin-bottom: 22px; }
-        .quiz-card-btn { background: var(--blue); color: white; border: none; border-radius: 12px; padding: 13px 32px; font-size: 15px; font-weight: 600; cursor: pointer; }
-
-        .art-footer { margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--border); }
-        .done-btn { width: 100%; padding: 13px; background: var(--blue); color: white; border: none; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 24px; transition: all .2s; }
-        .done-btn.completed { background: var(--green-l); color: var(--green); cursor: default; }
-
-        .fb-box { text-align: center; }
-        .fb-q { font-size: 14px; font-weight: 600; color: var(--ink-2); margin-bottom: 12px; }
-        .fb-row { display: flex; gap: 10px; }
-        .fb-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 10px; background: var(--bg-2); border: 1.5px solid var(--border); border-radius: 11px; font-size: 14px; font-weight: 500; color: var(--ink-2); cursor: pointer; }
-        .fb-btn.yes { background: var(--green-l); border-color: var(--green-b); color: var(--green); }
-        .fb-btn.no { background: var(--red-l); border-color: var(--red-b); color: var(--red); }
-        .fb-thanks { font-size: 12.5px; color: var(--ink-4); margin-top: 10px; display: none; }
-
-        #toast { position: fixed; top: 16px; left: 50%; transform: translateX(-50%) translateY(-90px); background: white; border: 1px solid var(--border); border-left: 4px solid var(--green); border-radius: 12px; padding: 12px 18px; font-size: 14px; font-weight: 600; color: var(--green); box-shadow: 0 8px 32px rgba(0,0,0,.1); display: flex; align-items: center; gap: 8px; z-index: 999; transition: transform .32s cubic-bezier(.34, 1.56, .64, 1), opacity .25s ease; opacity: 0; }
-        #toast.in { transform: translateX(-50%) translateY(0); opacity: 1; }
 
         @media(max-width:480px){ .crs-card { margin: 14px 12px 20px; } .phases { padding: 0 12px; } .art-pg { padding: 22px 16px 60px; } }
     </style>
 </head>
 <body>
     <nav id="main-nav">
-        <div class="nav-logo">Quit<span>Mantra</span> <small style="opacity:0.5;font-size:9px;font-weight:400;margin-left:4px">v2.1</small></div>
+        <div class="nav-logo">Quit<span>Mantra</span></div>
         <div class="lang-wrapper">
             <select id="language-selector" class="lang-picker">
                 <option value="en">EN</option>
@@ -255,20 +181,11 @@
         </div>
     </nav>
 
-    <div id="toast">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1.2"/><path d="M5 8l2.5 2.5 4-4" stroke="#16A34A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span id="toast-txt">Lesson completed!</span>
-    </div>
 
     <div id="view-list">
         <div class="page-wrap">
             <div class="crs-card">
-                <div class="crs-title" id="crs-title" data-i18n="course_title">Understanding Nicotine Dependence</div>
-                <div class="crs-prog-track"><div class="crs-prog-fill" id="crs-fill"></div></div>
-                <div class="crs-prog-row"><span id="crs-pct" data-i18n="progress_label">Completed 0%</span><span class="crs-prog-count" id="crs-cnt"></span></div>
-                <button class="crs-continue" id="crs-cont" onclick="continueCourse()">
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Continue
-                </button>
+                <div class="crs-title" id="crs-title" data-i18n="course_title">Ending Nicotine Dependency</div>
             </div>
             <div class="phases" id="phases"></div>
         </div>
@@ -280,7 +197,6 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
                 <span class="back-txt" data-i18n="btn_back">Back</span>
             </button>
-            <div class="read-track"><div class="read-fill" id="read-fill"></div></div>
         </div>
         <div class="art-pg">
             <div class="art-eyebrow" id="art-eye"></div>
@@ -290,19 +206,6 @@
                 <span id="art-time"></span>
             </div>
             <div class="art-body" id="art-body"></div>
-            <div class="art-footer" id="art-footer">
-                <button class="done-btn" id="done-btn" onclick="markDone()">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Mark as Complete
-                </button>
-                <div class="fb-box">
-                    <div class="fb-q">Was this lesson helpful?</div>
-                    <div class="fb-row">
-                        <button class="fb-btn" id="fb-y" onclick="giveFb(true)">Yes</button>
-                        <button class="fb-btn" id="fb-n" onclick="giveFb(false)">No</button>
-                    </div>
-                    <div class="fb-thanks" id="fb-thanks">Thank you for your feedback!</div>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -409,7 +312,7 @@
                     "title": "How to Build a Life You Don't Want to Run From",
                     "mins": 6,
                     "type": "Article",
-                    "content": "<p><strong>Your Goal:</strong> Begin building a life so genuinely engaging and meaningful that staying sober from Nicotine becomes desirable rather than merely disciplined.</p>\n<h2>The Problem With Just Quitting</h2>\n<p>Many people approach recovery as subtraction: remove Nicotine, then life continues. But when Nicotine has been a central organising feature of your days - providing structure, reward, social connection, or emotional management - removing it leaves a vacuum. And vacuums get filled with something. <strong>What this means for you:</strong> the question isn't only how to stop using Nicotine. It's what you're building instead.</p>\n<p><strong>What the research shows:</strong> people who stay sober are not primarily defined by willpower. They are defined by having a life they genuinely want to be present for. The clinical term is \"recovery capital\" - the resources, relationships, and meaning that make sobriety worth maintaining. Building recovery capital is not a bonus. It's the work.</p>\n<h2>Rebuilding Reward</h2>\n<p><strong>What happens in your brain:</strong> prolonged Nicotine use suppresses the natural dopamine response to everyday experiences. When you stop, the brain's reward system is temporarily blunted - things that used to be pleasurable feel flat. This is temporary, but it creates a window where building new reward associations is both challenging and essential.</p>\n<p>The approach that works is gradual exposure - not forcing yourself to enjoy things, but showing up consistently and letting the brain's natural reward system recover its sensitivity. Physical exercise, creative projects, learning something new, time in nature, and authentic connection with other people all stimulate the same dopamine pathways that Nicotine was hijacking. The difference is that they build reward capacity rather than depleting it.</p>\n<h2>Identity and Recovery</h2>\n<p><strong>Here's the thing:</strong> for many people, Nicotine use was part of how they thought about themselves - who they socialised with, what they did, how they relaxed. Recovery requires building a new answer to \"Who am I when I'm not using Nicotine?\"</p>\n<p>This means: what do you value? What kind of person do you want to be? What experiences do you want to have? Answering these questions with specificity - and making small daily decisions aligned with those answers - is how a new identity is built.</p>\n<h2>Your Next Steps</h2>\n<ul>\n<li>Write a \"life I want to be living in two years\" paragraph - not a goals list, but a vivid description of a day in that life. Include who you're with, what you're doing, and how you feel.</li>\n<li>Identify one activity this week that has nothing to do with Nicotine recovery. Show up for it even if it doesn't feel immediately rewarding.</li>\n<li>Consider what community or social context could support the life you want to build - new spaces, new connections, or deepening existing relationships.</li>\n</ul>"
+                    "content": "<p><strong>Your Goal:</strong> Begin building a life so genuinely engaging and meaningful that staying sober from Nicotine becomes desirable rather than merely disciplined.</p>\n<h2>The Problem With Just Quitting</h2>\n<p>Many people approach recovery as subtraction: remove Nicotine, then life continues. But when Nicotine has been a central organising feature of your days - providing structure, reward, social connection, or emotional management - removing it leaves a vacuum. And vacuums get filled with something. <strong>What this means for you:</strong> the question isn't only how to stop using Nicotine. It's what you're building instead.</p>\n<p><strong>What the research shows:</strong> people who stay sober are not primarily defined by willpower. They are defined by having a life they genuinely want to be present for. The clinical term is \"recovery capital\" - the resources, relationships, and meaning that make sobriety worth maintaining. Building recovery capital is not a bonus. It's the work.</p>\n<h2>Rebuilding Reward</h2>\n<p><strong>What happens in your brain:</strong> prolonged Nicotine use suppresses the natural dopamine response to everyday experiences. When you stop, the brain's reward system is temporarily blunted - things that used to be pleasurable feel flat. This is temporary, but it creates a window where building new reward associations is both challenging and essential.</p>\n<p>The approach that works is gradual exposure - not forcing yourself to enjoy things, but showing up consistently and letting the brain's natural reward system recover its sensitivity. Physical exercise, creative projects, learning something new, time in nature, and authentic connection with other people all stimulate the same dopamine pathways that Nicotine was hijacking. The difference is that they build reward capacity rather than depleting it.</p>\n<p><h2>Identity and Recovery</h2>\n<p><strong>Here's the thing:</strong> for many people, Nicotine use was part of how they thought about themselves - who they socialised with, what they did, how they relaxed. Recovery requires building a new answer to \"Who am I when I'm not using Nicotine?\"</p>\n<p>This means: what do you value? What kind of person do you want to be? What experiences do you want to have? Answering these questions with specificity - and making small daily decisions aligned with those answers - is how a new identity is built.</p>\n<h2>Your Next Steps</h2>\n<ul>\n<li>Write a \"life I want to be living in two years\" paragraph - not a goals list, but a vivid description of a day in that life. Include who you're with, what you're doing, and how you feel.</li>\n<li>Identify one activity this week that has nothing to do with Nicotine recovery. Show up for it even if it doesn't feel immediately rewarding.</li>\n<li>Consider what community or social context could support the life you want to build - new spaces, new connections, or deepening existing relationships.</li>\n</ul>"
                 },
                 {
                     "id": "relations",
@@ -436,8 +339,6 @@
         }
     ]
 };
-let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
-
         
 
         function init(customData) {
@@ -448,7 +349,6 @@ let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
             
             const list = document.getElementById('phases');
             list.innerHTML = '';
-            let total = 0, done = 0;
 
             phases.forEach(sec => {
                 const phase = document.createElement('div');
@@ -464,15 +364,12 @@ let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
                 const col = phase.querySelector('.lessons-col');
                 const lessons = sec.lessons || [];
                 lessons.forEach(ls => {
-                    total++;
-                    const isDone = read_nicotine.includes(ls.id);
-                    if(isDone) done++;
                     
                     const item = document.createElement('div');
-                    item.className = 'lc' + (isDone ? ' done' : '');
+                    item.className = 'lc';
                     item.innerHTML = `
                         <div class="lc-ico">
-                            ${isDone ? '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/><path d="M6 9l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="3" stroke="#94A3B8" stroke-width="1.2"/></svg>'}
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="3" stroke="#94A3B8" stroke-width="1.2"/></svg>
                         </div>
                         <div class="lc-body">
                             <div class="lc-title">${ls.title}</div>
@@ -485,30 +382,10 @@ let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
                 list.appendChild(phase);
             });
 
-            const pct = total ? Math.round((done / total) * 100) : 0;
-            const fill = document.getElementById('crs-fill');
-            if (fill) fill.style.width = pct + '%';
-            const pctText = document.getElementById('crs-pct');
-            if (pctText && !pctText.hasAttribute('data-i18n-applied')) {
-                pctText.innerText = `Completed ${pct}%`;
-            }
-            const cntText = document.getElementById('crs-cnt');
-            if (cntText) cntText.innerText = `${done}/${total}`;
-
-            const allLessons = phases.flatMap(s => s.lessons || []);
-            const next = allLessons.find(l => !read_nicotine.includes(l.id));
-            const contBtn = document.getElementById('crs-cont');
-            if (contBtn) {
-                if (next && done > 0) {
-                    contBtn.style.display = 'flex';
-                    window.nextLesson = next;
-                } else {
-                    contBtn.style.display = 'none';
-                }
-            }
+            
         }
 
-        function continueCourse() { if(window.nextLesson) openArt(window.nextLesson); }
+        
 
         function openArt(ls) {
             document.body.style.overflow = 'hidden';
@@ -518,40 +395,15 @@ let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
             document.getElementById('art-eye').innerText = ls.type;
             document.getElementById('art-h1').innerText = ls.title;
             document.getElementById('art-time').innerText = ls.mins + ' mins';
-            document.getElementById('art-body').innerHTML = ls.content || '<div class="quiz-card"><div class="quiz-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><h2>Ready to check your progress?</h2><p>This assessment helps you understand your relationship with ' + DATA.substance + ' and identifies key areas for focus.</p><button class="quiz-card-btn" onclick="markDone()">Start Assessment</button></div>';
+            document.getElementById('art-body').innerHTML = ls.content || '<div class="quiz-card"><div class="quiz-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><h2>Ready to check your progress?</h2><p>This assessment helps you understand your relationship with ' + DATA.substance + ' and identifies key areas for focus.</p><button class="quiz-card-btn" onclick="closeArt()">Start Assessment</button></div>';
             
-            const btn = document.getElementById('done-btn');
-            const isDone = read_nicotine.includes(ls.id);
-            btn.className = 'done-btn' + (isDone ? ' completed' : '');
-            btn.innerHTML = isDone ? '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Lesson Completed' : '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Mark as Complete';
             
-            window.currId = ls.id;
+            
         }
 
         function closeArt() { 
             document.body.style.overflow = '';
             document.getElementById('view-art').classList.remove('open'); 
-        }
-
-        function markDone() {
-            if (!read_nicotine.includes(window.currId)) {
-                read_nicotine.push(window.currId);
-                localStorage.setItem('read_nicotine', JSON.stringify(read_nicotine));
-                showToast();
-                init();
-            }
-            closeArt();
-        }
-
-        function showToast() {
-            const t = document.getElementById('toast');
-            t.classList.add('in');
-            setTimeout(() => t.classList.remove('in'), 3000);
-        }
-
-        function giveFb(y) {
-            document.getElementById('fb-thanks').style.display = 'block';
-            setTimeout(() => document.getElementById('fb-thanks').style.display = 'none', 3000);
         }
         // === SELF-CONTAINED i18n ===
         const _LANGS = ['en','es','fr','de','hi','ja','zh-CN','ko','ru','it','pt','ar','tr','nl','pl','vi','th','id','sv','cs'];
@@ -602,19 +454,6 @@ let read_nicotine = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
                         if (crsTitle) {
                             crsTitle.innerText = t.course_title;
                             crsTitle.removeAttribute('data-i18n'); // prevent it from being overwritten by init back-logic
-                        }
-                    }
-                    if (t.progress_label) {
-                        const pctText = document.getElementById('crs-pct');
-                        if (pctText) {
-                            // Quick calculation for the progress label before init
-                            const curProgress = JSON.parse(localStorage.getItem('read_nicotine') || '[]');
-                            const allLessons = (t.DATA || DATA).phases.flatMap(p => p.lessons || []);
-                            const done = allLessons.filter(l => curProgress.includes(l.id)).length;
-                            const total = allLessons.length;
-                            const currentPct = total ? Math.round((done / total) * 100) : 0;
-                            pctText.innerText = t.progress_label.replace('0', currentPct);
-                            pctText.setAttribute('data-i18n-applied', 'true');
                         }
                     }
 
